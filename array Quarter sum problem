@@ -1,0 +1,35 @@
+https://onlinegdb.com/HJklNny_v
+
+
+
+
+/*******************************************************************************/
+
+import java.util.*;
+
+
+
+public class Main
+{
+	public static void main(String[] args) {
+		int arr[] = new int[] {1,2,5,4,3,4};
+		int sumarr[] = new int[arr.length-4+1];
+		int sum = 0;
+		for(int i=0;i<arr.length-4+1;i++){
+		    
+		    for(int j=i;j<4+i;j++){
+		        sum = sum+arr[j];
+		    }
+		    
+		    sumarr[i]= sum;
+		    sum = 0;
+		    
+		}
+		int max = 0;
+		for(int i:sumarr){
+		   max = Math.max(i,max);
+		}
+		System.out.println(max);
+	}
+}
+
